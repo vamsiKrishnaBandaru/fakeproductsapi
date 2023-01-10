@@ -29,7 +29,7 @@ fetch(url)
 
 function AllData(product) {
   const ul = document.querySelector('ul')
-  for (let i = 0; i < product.length; i++) {
+  for (let index = 0; index < product.length; index++) {
 
     let li = document.createElement('li');
     let img = document.createElement('img')
@@ -46,12 +46,12 @@ function AllData(product) {
     price.setAttribute('class', 'price')
     rating.setAttribute('class', 'rating');
 
-    category.innerHTML = product[i].category
-    img.src = product[i].image;
-    title.innerText = product[i].title;
-    description.innerText = product[i].description.slice(0, 75) + `...`;
-    rating.innerText = product[i].rating.rate + `(${product[i].rating.count})`
-    price.innerHTML = "$" + product[i].price;
+    category.innerHTML = product[index].category
+    img.src = product[index].image;
+    title.innerText = product[index].title;
+    description.innerText = product[index].description.slice(0, 75) + `...`;
+    rating.innerText = product[index].rating.rate + `(${product[index].rating.count})`
+    price.innerHTML = "$" + product[index].price;
 
     li.append(category, img, title, description, rating, price, div)
     ul.append(li)
