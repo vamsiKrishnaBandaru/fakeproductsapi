@@ -124,6 +124,57 @@ footer ul {
   font-size: 1.1rem;
 }
 
+/* loader */
+
+.lds-dual-ring {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  border-color: rgb(151, 20, 20) transparent rgb(54, 170, 190) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 5rem;
+  padding: 5rem;
+}
+
+.error-message {
+  display: none;
+}
+
+.noProducts {
+  text-align: center;
+}
+.noProducts {
+  display: none;
+}
+
 @media (max-width: 850px) {
   * {
     width: auto;
