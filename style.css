@@ -124,15 +124,15 @@ footer ul {
   font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
-  *{
+@media (max-width: 850px) {
+  * {
     width: auto;
   }
-  ul{
+  ul {
     flex-direction: column;
     width: auto;
   }
-  .main li{
+  .main li {
     width: 85%;
     align-self: center;
   }
