@@ -18,7 +18,8 @@ fetch(url)
       console.err("no data");
       return;
     }
-    fake(data)
+    console.log(data[1])
+    AllData(data)
   })
 
   .catch((err) => {
@@ -26,7 +27,7 @@ fetch(url)
     return
   });
 
-function fake(product) {
+function AllData(product) {
   const ul = document.querySelector('ul')
   for (let i = 0; i < product.length; i++) {
 
@@ -34,27 +35,25 @@ function fake(product) {
     let img = document.createElement('img')
     let title = document.createElement('h4')
     let description = document.createElement('p');
-    let button = document.createElement('button')
     let price = document.createElement('h3');
     let div = document.createElement('div')
     let category = document.createElement('p')
     let rating = document.createElement('div')
 
-    button.setAttribute('class', 'btn');
     div.setAttribute('class', 'container');
     category.setAttribute('class', 'category');
     title.setAttribute('class', 'title');
     price.setAttribute('class', 'price')
+    rating.setAttribute('class', 'rating');
 
     category.innerHTML = product[i].category
     img.src = product[i].image;
     title.innerText = product[i].title;
     description.innerText = product[i].description.slice(0, 75) + `...`;
-    button.innerText = 'Add to cart'
-    price.innerText = "$" + product[i].price;
-    rating.innerText = product[i].rating.rate
-    div.append(button)
-    li.append(category, img, title, description, price, div, rating)
+    rating.innerText = product[i].rating.rate + `(${product[i].rating.count})`
+    price.innerHTML = "$" + product[i].price;
+
+    li.append(category, img, title, description, rating, price, div)
     ul.append(li)
   };
 }
