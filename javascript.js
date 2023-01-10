@@ -1,5 +1,6 @@
 // fetching the data from the api
 
+var h1 = document.querySelector('h1')
 const url = 'https://fakestoreapi.com/products'
 const loader = document.querySelector('.lds-dual-ring')
 const failed = document.querySelector('.error-message')
@@ -20,23 +21,25 @@ fetch(url)
     if (data.length < 1) {
       console.err("no data");
       noProducts.style.display = 'block'
+      remover(h1)
       return;
     } else {
-      mainLoader(loader)
+      remover(loader)
       AllData(data)
     }
   })
 
   .catch((err) => {
-    mainLoader(loader)
+    remover(loader)
     failed.style.display = 'block'
+    remover(h1)
     console.log(err, 'error fetching');
     return
   });
 
 
 // remove loader
-function mainLoader(loader) {
+function remover(loader) {
   loader.remove()
 }
 
