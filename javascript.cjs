@@ -1,5 +1,5 @@
 // fetching the data from the api
-const url = 'https://fakestoreapi.com/products/12'
+const url = 'https://fakestoreapi.com/products'
 
 fetch(url)
   .then((response) => {
