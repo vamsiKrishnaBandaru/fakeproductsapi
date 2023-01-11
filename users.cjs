@@ -1,4 +1,4 @@
-const url = 'https://fakestoreapi.com/users'
+const url = 'https://fakestoreapi.com/users/'
 
 const heading = document.querySelector('.heading')
 
@@ -64,13 +64,6 @@ function showErrorMessage() {
 }
 
 
-function topage(users) {
-  users.forEach(user => {
-    singleData(user)
-  });
-}
-
-
 function singleData(user) {
 
   const ul = document.querySelector('ul')
@@ -101,4 +94,10 @@ function singleData(user) {
   div.append(name, username, password, phone, email, street, city, number, zipcode);
   li.append(img, div)
   ul.append(li);
+}
+
+function topage(users) {
+  users.forEach(user => {
+    singleData(user)
+  });
 }
