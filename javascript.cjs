@@ -44,9 +44,9 @@ function remover(loader) {
 }
 
 
-function AllData(product) {
+function AllData(products) {
   const ul = document.querySelector('ul')
-  for (let index = 0; index < product.length; index++) {
+  products.forEach(product => {
 
     let li = document.createElement('li');
     let img = document.createElement('img')
@@ -63,14 +63,14 @@ function AllData(product) {
     price.setAttribute('class', 'price')
     rating.setAttribute('class', 'rating');
 
-    category.innerHTML = product[index].category
-    img.src = product[index].image;
-    title.innerText = product[index].title;
-    description.innerText = product[index].description.slice(0, 75) + `...`;
-    rating.innerText = product[index].rating.rate + `(${product[index].rating.count})`
-    price.innerHTML = "$" + product[index].price;
+    category.innerHTML = product.category
+    img.src = product.image;
+    title.innerText = product.title;
+    description.innerText = product.description.slice(0, 75) + `...`;
+    rating.innerText = product.rating.rate + `(${product.rating.count})`
+    price.innerHTML = "$" + product.price;
 
     li.append(category, img, title, description, rating, price, div)
     ul.append(li)
-  };
+  });
 }
