@@ -17,7 +17,6 @@ fetch(url)
 
   .then((data) => {
     if (data.length < 1) {
-      console.log("no data");
       noProducts()
       return;
     } else if (!Array.isArray(data)) {
@@ -37,6 +36,8 @@ fetch(url)
     return
   });
 
+
+// functions to displays and remmove when things the are happens
 
 function removeLoader() {
   var loader = document.querySelector('.lds-dual-ring')
@@ -58,11 +59,7 @@ function showErrorMessage() {
   failed.style.display = 'block'
 }
 
-function AllData(products) {
-  products.forEach(product => {
-    singleProduct(product)
-  });
-}
+// for single data
 
 function singleProduct(product) {
   const ul = document.querySelector('ul')
@@ -91,4 +88,12 @@ function singleProduct(product) {
 
   li.append(category, img, title, description, rating, price, div)
   ul.append(li)
+}
+
+// when my data is Array
+
+function AllData(products) {
+  products.forEach(product => {
+    singleProduct(product)
+  });
 }

@@ -1,7 +1,5 @@
 const url = 'https://fakestoreapi.com/users/'
 
-const heading = document.querySelector('.heading')
-
 
 fetch(url)
   .then((response) => {
@@ -41,7 +39,7 @@ fetch(url)
   });
 
 
-// remove loader
+// functions to displays and remmove when things the are happens
 
 function removeLoader() {
   var loader = document.querySelector('.lds-dual-ring')
