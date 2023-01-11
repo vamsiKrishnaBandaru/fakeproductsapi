@@ -22,20 +22,29 @@ header {
   display: flex;
   justify-content: space-between;
 }
-header li{
+.headerContents {
+  display: flex;
+  gap: 0.3rem;
+}
+header li {
   list-style: none;
 }
-header a{
+header a {
   color: white;
   text-decoration: none;
+  font-size: 1rem;
+}
+a button {
+  border: none;
+}
+header button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 header i {
   margin-right: 0.4rem;
 }
-.headerContents{
-  /* align-self: center; */
-  /* display: flex; */
-}
+
 header .buttons {
   display: flex;
   gap: 1rem;
