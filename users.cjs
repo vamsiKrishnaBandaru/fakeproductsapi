@@ -8,7 +8,8 @@ fetch(url)
 
     if (!response.ok) {
       console.log('fetching failed')
-      errorOccured('ERROR')
+      showErrorMessage()
+      removeLoader()
       return
     } else {
       return response.json();
@@ -21,9 +22,13 @@ fetch(url)
       heading.style.display = 'none'
       console.err("no data");
       return;
-    } else {
+    } else if (!Array.isArray(data)) {
+      singleData(data)
       removeLoader()
       showheading()
+    } else {
+      showheading()
+      removeLoader()
       topage(data)
     }
   })
@@ -59,44 +64,41 @@ function showErrorMessage() {
 }
 
 
-
 function topage(users) {
-  const ul = document.querySelector('ul')
-  index = 0;
   users.forEach(user => {
-
-    let div = document.createElement('div')
-    let li = document.createElement('li');
-    let name = document.createElement('h3');
-    let email = document.createElement('p');
-    let street = document.createElement('p');
-    let username = document.createElement('p');
-    let password = document.createElement('p');
-    let phone = document.createElement('div');
-    let city = document.createElement('div');
-    let number = document.createElement('p');
-    let zipcode = document.createElement('p');
-    let img = document.createElement('img');
-
-    img.src = 'https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png'
-
-    name.textContent = 'Fullname: ' + user.name.firstname + ' ' + user.name.lastname;
-    email.textContent = 'Email: ' + user.email;
-    username.textContent = 'Username: ' + user.username;
-    phone.textContent = 'Phone: ' + user.phone
-    city.textContent = 'City: ' + user.address.city
-    number.textContent = 'Number: ' + user.address.number
-    password.textContent = 'Password: ' + user.password
-    street.textContent = 'Street: ' + user.address.street
-
-    div.append(name, username, password, phone, email, street, city, number, zipcode);
-    li.append(img, div)
-    ul.append(li);
+    singleData(user)
   });
 }
 
-function errorOccured(msg) {
-  if (msg == "Error") {
-    failed.style.display = "block";
-  }
+
+function singleData(user) {
+
+  const ul = document.querySelector('ul')
+  let div = document.createElement('div')
+  let li = document.createElement('li');
+  let name = document.createElement('h3');
+  let email = document.createElement('p');
+  let street = document.createElement('p');
+  let username = document.createElement('p');
+  let password = document.createElement('p');
+  let phone = document.createElement('div');
+  let city = document.createElement('div');
+  let number = document.createElement('p');
+  let zipcode = document.createElement('p');
+  let img = document.createElement('img');
+
+  img.src = 'https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png'
+
+  name.textContent = 'Fullname: ' + user.name.firstname + ' ' + user.name.lastname;
+  email.textContent = 'Email: ' + user.email;
+  username.textContent = 'Username: ' + user.username;
+  phone.textContent = 'Phone: ' + user.phone
+  city.textContent = 'City: ' + user.address.city
+  number.textContent = 'Number: ' + user.address.number
+  password.textContent = 'Password: ' + user.password
+  street.textContent = 'Street: ' + user.address.street
+
+  div.append(name, username, password, phone, email, street, city, number, zipcode);
+  li.append(img, div)
+  ul.append(li);
 }

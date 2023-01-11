@@ -18,7 +18,7 @@ fetch(url)
   })
 
   .then((data) => {
-    if (data.length < 1) {
+    if (data === null || !data) {
       console.err("no data");
       noProducts.style.display = 'block'
       remover(h1)
