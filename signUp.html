@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up page</title>
+  <link rel="stylesheet" href="signUp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <i class="fa fa-shopping-cart"></i>My Cart
+    </div>
+    <div class="headerContents">
+      <li> <a href="index.html"><button>Home</button></a> </li>
+      <li> <a href="#"><button>Menu</button></a> </li>
+      <li> <a href="users.html"><button>Users</button></a> </li>
+    </div>
+    <div>
+      <div class="buttons">
+        <button> log in</button>
+      </div>
+    </div>
+  </header>
+  <section>
+    <h1>Create Account</h1>
+    <div class="main-box">
+      <div class="form-box">
+        <form id="signup-form">
+
+          <div class="firstName-sec">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <div class="lastname-sec">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <div class="email-sec">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="password-sec">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="repeat-password-sec">
+            <label for="password-repeat">Repeat Password</label>
+            <input type="password" id="password-repeat" name="password-repeat" required>
+          </div>
+      </div>
+      <div class="tos">
+        <input type="checkbox" id="tos" name="tos" required>
+        <label for="tos">I agree to the terms of service</label>
+      </div>
+      <div class="btn-signup">
+        <input type="submit" value="Sign up">
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <div class="support">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+<script src="./js/javascript.cjs"></script>
+
+</html>

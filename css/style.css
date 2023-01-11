@@ -54,6 +54,7 @@ button {
   background: none;
   border: none;
 }
+
 button {
   color: white;
   border: 1px solid white;
@@ -61,7 +62,9 @@ button {
   font-size: 1rem;
   border-radius: 0.2rem;
 }
-
+.buttons a {
+  border: 1px solid white;
+}
 .heading {
   display: none;
 }
@@ -120,6 +123,9 @@ p {
   font-size: 300;
   align-self: center;
   font-size: 1.6rem;
+}
+.main li:hover {
+  transform: scale(1.02);
 }
 
 footer {
