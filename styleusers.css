@@ -94,3 +94,18 @@ li div {
   display: none;
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  * {
+    width: auto;
+  }
+  ul {
+    flex-direction: column;
+    width: auto;
+  }
+  li {
+    width: 80%;
+    align-self: center;
+  }
+}
+

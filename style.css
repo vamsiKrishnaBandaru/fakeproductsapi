@@ -207,4 +207,12 @@ footer ul {
     width: 85%;
     align-self: center;
   }
+  .headerContents {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+  }
 }
