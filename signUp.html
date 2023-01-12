@@ -30,20 +30,18 @@
   <section>
     <h1>Create Account</h1>
     <div class="main-box">
-      <div class="form-box">
-        <form id="signup-form">
+        <form id="signup-form" method="post">
 
           <div class="firstName-sec">
             <label for="first-name">First Name</label>
             <input type="text" id="first-name" name="first-name" required>
-            <p class="errorMessage">rtgrtgrt</p>
-          </div>
-
-          <div class="lastname-sec">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required>
             <p class="errorMessage"></p>
           </div>
+            <div class="lastname-sec">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required>
+              <p class="errorMessage"></p>
+            </div>
 
           <div class="email-sec">
             <label for="email">Email Address</label>
@@ -62,12 +60,11 @@
             <input type="password" id="password-repeat" name="password-repeat" required>
             <p class="errorMessage"></p>
           </div>
-      </div>
-      <div class="tos">
-        <input type="checkbox" id="tos" name="tos" required>
-        <label for="tos">I agree to the terms of service</label>
-        <p class="errorMessage"></p>
-      </div>
+            <div class="tos">
+              <input type="checkbox" id="tos" name="tos" required>
+              <label for="checkbox"> I agree with all <a href="#">Terms and Conditions</a> and<a href="#"> Privacy
+                Policies</a> of my cart.</label>
+            </div>
       <div class="btn-signup">
         <input type="submit" value="Sign up">
       </div>
