@@ -115,7 +115,7 @@ section h1 {
 
 .main-box {
   padding: 2.5rem 3rem;
-  width: 30%;
+  width: 36%;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -207,7 +207,8 @@ form div {
 .tos-test-msg p {
   font-weight: 400;
 }
-@media (max-width: 800px) {
+
+@media (max-width: 1200px) {
   * {
     width: auto;
   }
@@ -228,6 +229,12 @@ form div {
     align-items: center;
   }
   .main-box {
-    width: auto;
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-box {
+    width: 70%;
   }
 }
