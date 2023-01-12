@@ -151,19 +151,16 @@ form div {
 .main-box div p {
   font-size: 0.8rem;
 }
+
 .btn-signup {
-  align-self: center;
-  font-size: 600;
-}
-.btn-signup input {
-  border: none;
-  padding: 0.2rem 2rem;
+  padding: 0.4rem 1rem;
   border-radius: 0.4rem;
-  background-color: rgb(41, 41, 95);
-  color: white;
-  font-size: 1.2rem;
 }
-.btn-signup input:hover {
+.btn-signup button {
+  border: none;
+  background: none;
+}
+.btn-signup button:hover {
   cursor: pointer;
 }
 
@@ -174,6 +171,14 @@ form div {
 .errorMessage {
   color: red;
   font-size: 0.8rem;
+}
+.btn-signup {
+  align-self: center;
+  font-size: 600;
+  background-color: rgb(41, 41, 95);
+}
+.btn-signup input:focus {
+  background-color: rgb(41, 41, 95);
 }
 .tos {
   display: flex;
