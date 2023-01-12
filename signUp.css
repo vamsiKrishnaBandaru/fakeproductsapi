@@ -110,6 +110,7 @@ section {
 
 section h1 {
   font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .main-box {
@@ -179,7 +180,7 @@ form div {
   flex-direction: row;
   align-items: center;
   font-weight: lighter;
-  font-size: 0.64rem;
+  font-size: 0.76rem;
 }
 .tos input {
   width: auto;
@@ -188,7 +189,19 @@ form div {
 .sign-up-done {
   display: none;
 }
-
+.sign-up-done {
+  align-self: center;
+}
+.sign-up-done img {
+  width: 120%;
+  margin-top: 5rem;
+}
+.tos-test-msg label {
+  margin-bottom: -0.6rem;
+}
+.tos-test-msg p {
+  font-weight: 400;
+}
 @media (max-width: 800px) {
   * {
     width: auto;
