@@ -9,6 +9,46 @@ const tosErrorMsg = document.querySelector('.tos-error-msg')
 const successMsg = document.querySelector('.sign-up-done')
 const signUpSec = document.querySelector('.sign-up-sec')
 
+
+
+function errorOcuured(element, text) {
+  element.nextElementSibling.textContent = text
+  element.nextElementSibling.style.color = 'red'
+  element.style.border = '1px solid red'
+  
+}
+
+function borderGreen(element) {
+  element.nextElementSibling.textContent = ""
+  element.style.border = '1px solid green'
+}
+
+function checkName(name) {
+  const checkCharectors = ['~', '!', '@', '#', '$', '%', '*', '(', ')', '+', '=', ':']
+  if (name.includes(checkCharectors)) {
+    return true
+  }
+}
+
+function checkEmail(email) {
+  var check = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  if (!email.match(check)) {
+    return true
+  }
+  return false
+}
+
+function checkPassword(password) {
+  if ((password.length < 8 || password.length > 16)) {
+    return true
+  }
+  return false
+}
+
+
+
+// main function starts from here
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   let checkList = false;
@@ -40,7 +80,7 @@ form.addEventListener('submit', (event) => {
     borderGreen(password)
   }
 
-  if ((password.value === passwordRepeat.value && passwordRepeat.value !== '')) {
+  if ((password.value === passwordRepeat.value && passwordRepeat.value !== '') && !checkPassword(passwordRepeat.value)) {
     borderGreen(passwordRepeat)
   } else {
     errorOcuured(passwordRepeat, 'Password must be same')
@@ -56,37 +96,3 @@ form.addEventListener('submit', (event) => {
     signUpSec.style.display = 'none'
   }
 })
-
-function checkName(name) {
-  const checkCharectors = ['~', '!', '@', '#', '$', '%', '*', '(', ')', '+', '=', ':']
-  if (name.includes(checkCharectors)) {
-    return true
-  }
-}
-
-
-function checkEmail(email) {
-  var check = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-  if (!email.match(check)) {
-    return true
-  }
-  return false
-}
-
-function checkPassword(password) {
-  if (password.length < 8 && password.length > 16) {
-    return true
-  }
-}
-
-function errorOcuured(element, text) {
-  element.nextElementSibling.textContent = text
-  element.nextElementSibling.style.color = 'red'
-  element.style.border = '1px solid red'
-
-}
-
-function borderGreen(element) {
-  element.nextElementSibling.textContent = ""
-  element.style.border = '1px solid green'
-}
