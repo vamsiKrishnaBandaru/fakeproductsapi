@@ -27,50 +27,55 @@
       </div>
     </div>
   </header>
-  <section>
+  <section class="sign-up-sec">
     <h1>Create Account</h1>
     <div class="main-box">
-        <form id="signup-form" method="post">
+      <form action="" id="signup-form">
 
-          <div class="firstName-sec">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required>
-            <p class="errorMessage"></p>
-          </div>
-            <div class="lastname-sec">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last-name" required>
-              <p class="errorMessage"></p>
-            </div>
+        <div class="firstName-sec">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name">
+          <p></p>
+        </div>
 
-          <div class="email-sec">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-            <p class="errorMessage"></p>
-          </div>
+        <div class="lastname-sec">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name">
+          <p></p>
+        </div>
 
-          <div class="password-sec">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <p class="errorMessage"></p>
-          </div>
+        <div class="email-sec">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email">
+          <p></p>
+        </div>
 
-          <div class="repeat-password-sec">
-            <label for="password-repeat">Repeat Password</label>
-            <input type="password" id="password-repeat" name="password-repeat" required>
-            <p class="errorMessage"></p>
-          </div>
-            <div class="tos">
-              <input type="checkbox" id="tos" name="tos" required>
-              <label for="checkbox"> I agree with all <a href="#">Terms and Conditions</a> and<a href="#"> Privacy
-                Policies</a> of my cart.</label>
-            </div>
-      <div class="btn-signup">
-        <input type="submit" value="Sign up">
-      </div>
+        <div class="password-sec">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+          <p></p>
+        </div>
+
+        <div class="repeat-password-sec">
+          <label for="password-repeat">Repeat Password</label>
+          <input type="password" id="password-repeat" name="password-repeat">
+          <p></p>
+        </div>
+        <div class="tos">
+          <input type="checkbox" id="tos" name="tos">
+          <label for="checkbox"> I agree with all <a href="#">Terms and Conditions</a>of my cart.</label>
+        </div>
+        <div class="btn-signup">
+          <input type="submit" value="Sign up">
+        </div>
+      </form>
     </div>
-
   </section>
+
+  <section class="sign-up-done">
+    <img src="https://storage.googleapis.com/desktop-client-assets/images/success.png">
+  </section>
+
   <footer>
     <div class="support">
       <ul>
@@ -84,6 +89,6 @@
   </footer>
 
 </body>
-<script src="./js/javascript.cjs"></script>
+<script src="signUp.cjs"></script>
 
 </html>

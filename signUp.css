@@ -147,7 +147,9 @@ form div {
 .main-box label {
   font-weight: 600;
 }
-
+.main-box div p {
+  font-size: 0.8rem;
+}
 .btn-signup {
   align-self: center;
   font-size: 600;
@@ -181,6 +183,10 @@ form div {
 }
 .tos input {
   width: auto;
+}
+
+.sign-up-done {
+  display: none;
 }
 
 @media (max-width: 800px) {
